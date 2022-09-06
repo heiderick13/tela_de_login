@@ -1,0 +1,60 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #003049;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquerda-img {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.esquerda-img > h1 {
+    color: #EAE2B7;
+    font-weight: 800;
+}
+
+.form-direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-login {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #075883;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #f7b93f;
+    font-weight: 800;
+}
+
+.txtarea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
