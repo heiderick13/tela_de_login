@@ -24,6 +24,7 @@ body {
 .esquerda-img > h1 {
     color: #EAE2B7;
     font-weight: 800;
+    font-size: 3vw;
 }
 
 .left-login-img {
@@ -77,6 +78,10 @@ body {
     box-shadow: 0 10px 40px #00000056;
 }
 
+.txtarea > input:focus {
+    transform: scale(102%);
+}
+
 .txtarea > input::placeholder {
     color: #DADADA;
 }
@@ -100,4 +105,34 @@ body {
     transform: scale(105%);
 }
 
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
 
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .esquerda-img > h1 {
+        display: none;
+    }
+
+    .esquerda-img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    .form-direita {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-img {
+        width: 50vw;
+    }
+}
