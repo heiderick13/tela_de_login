@@ -1,138 +1,179 @@
-body {
-    font-family: 'Inter', sans-serif;
+:root {
+  --primary: hsl(201, 90%, 21%);
+  --secondary: hsl(201, 59%, 45%);
+  --valid: hsl(120, 82%, 70%);
+  --invalid: hsl(0, 100%, 64%);
+  --yellow: hsl(40, 92%, 61%);
+  --yellowish: hsl(51, 55%, 82%);
+  --greyish: hsl(0, 0%, 85%);
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
 
 .main-login {
-    width: 100vw;
-    height: 100vh;
-    background-color: #003049;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
 }
 
 .esquerda-img {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .esquerda-img > h1 {
-    color: #EAE2B7;
-    font-weight: 800;
-    font-size: 3vw;
+  color: var(--yellowish);
+  font-weight: 800;
+  font-size: 3vw;
 }
 
 .left-login-img {
-    width: 35vw;
+  width: 40vw;
 }
 
-.form-direita {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#form,
+.form-control {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
+.container {
+  padding: 1.5rem;
+  line-height: 2;
+  width: 35vw;
+}
 
-.card-login {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.title {
+  color: var(--yellow);
+  font-size: 2.5vw;
+  font-weight: 800;
+  padding: 1rem 0;
+  line-height: 1.2;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  margin: 1rem 0 1rem;
+}
+
+input:focus {
+  transform: scale(102%);
+}
+
+input::placeholder {
+  color: var(--greyish);
+}
+
+input,
+button {
+  outline: none;
+}
+
+.invalid,
+.valid {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  visibility: hidden;
+}
+
+.valid {
+  color: var(--valid);
+}
+
+.invalid {
+  color: var(--invalid);
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  color: var(--greyish);
+  padding: 1rem;
+  font-size: 12pt;
+  box-shadow: 0 10px 40px #00000056;
+}
+
+.btn-submit {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--primary);
+  background-color: var(--yellow);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  transform: scale(105%);
+}
+
+.form-control.succes input {
+  border: solid 2px var(--valid);
+}
+
+.form-control.succes .valid {
+  visibility: visible;
+}
+
+.form-control.error input {
+  border: solid 3px var(--invalid);
+}
+
+.form-control.error .invalid {
+  visibility: visible;
+}
+
+.error-template {
+  color: var(--invalid);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-login {
     flex-direction: column;
-    background-color: #075883;
-    padding: 3.5rem 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 40px #00000056;
-}
+    padding: 0 4rem;
+  }
 
-.card-login > h1 {
-    color: #f7b93f;
-    font-weight: 800;
-}
+  .esquerda-img > h1 {
+    visibility: hidden;
+  }
 
-.txtarea {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 15px 0;
-
-}
-
-.txtarea > input {
+  .esquerda-img {
     width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    background-color: #2f88b8;
-    color: #DADADA;
-    padding: 1em;
-    font-size: 12pt;
-    box-shadow: 0 10px 40px #00000056;
-}
+    height: auto;
+  }
 
-.txtarea > input:focus {
-    transform: scale(102%);
-}
+  .left-login-img {
+    width: 50vw;
+  }
 
-.txtarea > input::placeholder {
-    color: #DADADA;
-}
+  .container {
+    width: 100%;
+  }
 
-.btn-login {
-    width: 80%;
-    padding: 1em 0;
-    border-radius: 8px;
-    border: none;
-    margin: 1.5em 0 1em;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #054364;
-    background-color: #f7b93f;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn-login:hover {
-    transform: scale(105%);
-}
-
-@media only screen and (max-width: 950px) {
-    .card-login {
-        width: 85%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .main-login {
-        flex-direction: column;
-    }
-
-    .esquerda-img > h1 {
-        display: none;
-    }
-
-    .esquerda-img {
-        width: 100%;
-        height: auto;
-    }
-
-
-
-    .form-direita {
-        width: 100%;
-        height: auto;
-    }
-
-    .left-login-img {
-        width: 50vw;
-    }
+  .title {
+    font-size: 4vw;
+  }
 }
