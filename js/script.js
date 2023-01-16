@@ -35,6 +35,7 @@ function checkPassword() {
     errorMsg.classList.add("hidden");
   }
 }
+
 //event handlers
 form.addEventListener("submit", (e) => {
   e.preventDefault();

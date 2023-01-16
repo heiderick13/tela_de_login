@@ -1,11 +1,11 @@
 :root {
   --primary: hsl(201, 90%, 21%);
-  --secondary: hsl(201, 59%, 45%);
+  --light-blue: hsl(201, 59%, 45%);
   --valid: hsl(120, 82%, 70%);
   --invalid: hsl(0, 100%, 64%);
   --yellow: hsl(40, 92%, 61%);
   --yellowish: hsl(51, 55%, 82%);
-  --greyish: hsl(0, 0%, 85%);
+  --greyish: hsl(0, 0%, 54%);
 }
 
 body {
@@ -59,10 +59,15 @@ body {
 }
 
 input {
+  width: 100%;
   padding: 1rem;
-  border-radius: 0.3rem;
   border: none;
   margin: 1rem 0 1rem;
+  outline: none;
+  border-radius: 5px;
+  color: var(--greyish);
+  font-size: 14px;
+  box-shadow: 0 10px 40px #00000056;
 }
 
 input:focus {
@@ -92,18 +97,6 @@ button {
 
 .invalid {
   color: var(--invalid);
-}
-
-input {
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background-color: var(--secondary);
-  color: var(--greyish);
-  padding: 1rem;
-  font-size: 12pt;
-  box-shadow: 0 10px 40px #00000056;
 }
 
 .btn-submit {
